@@ -29,19 +29,23 @@ int main(int argc, char *argv[])
     vector<int> distances = graph.dijkstra(startVertex);
     auto end_time = high_resolution_clock::now(); // Tempo final
 
+    int x = 1000; // Destino
+
     // Exibição das distâncias mínimas a partir do vértice inicial
     for (int i = 0; i < vertices; ++i)
     {
-        cout << "Distancia do vertice " << startVertex << " ao vertice " << i << ": ";
-        if (distances[i] == INF)
+        cout << "Distancia do vertice " << startVertex << " ao vertice " << x << ": ";
+        if (distances[x] == INF)
         {
             cout << "INF" << endl;
         }
         else
         {
-            cout << distances[i] << endl;
+            cout << distances[x] << endl;
         }
     }
+
+    cout << "Distancia do vertice " << startVertex << " ao vertice " << x << ": " << distances[x] << endl;
 
     // Calcula a duração em milissegundos
     auto duration = duration_cast<milliseconds>(end_time - start_time);
