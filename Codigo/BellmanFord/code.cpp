@@ -33,10 +33,11 @@ void Graph::bellmanFord(int src)
             return;
         }
     }
-
-    cout << "Distâncias do vértice origem " << src << ":" << endl;
-    for (int i = 0; i < V; ++i)
-    {
-        cout << "Vertice " << i << " : " << dist[i] << endl;
-    }
+    /* Para imprimir as distâncias
+        cout << "Distancias do vertice origem " << src << ":" << endl;
+        for (int i = 0; i < V; ++i)
+        {
+            cout << "Vertice " << i << " : " << dist[i] << endl;
+        }
+        */
 }

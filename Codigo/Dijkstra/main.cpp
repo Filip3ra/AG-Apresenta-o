@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 
     int startVertex = 0; // Vértice inicial
 
-    auto start_time = high_resolution_clock::now(); // Marca tempo inicial
+    auto start_time = high_resolution_clock::now(); // Tempo inicial
     vector<int> distances = graph.dijkstra(startVertex);
     auto end_time = high_resolution_clock::now(); // Tempo final
 
@@ -34,18 +34,18 @@ int main(int argc, char *argv[])
     // Exibição das distâncias mínimas a partir do vértice inicial
     for (int i = 0; i < vertices; ++i)
     {
-        cout << "Distancia do vertice " << startVertex << " ao vertice " << x << ": ";
-        if (distances[x] == INF)
+        cout << "Distancia do vertice " << startVertex << " ao vertice " << i << ": ";
+        if (distances[i] == INF)
         {
             cout << "INF" << endl;
         }
         else
         {
-            cout << distances[x] << endl;
+            cout << distances[i] << endl;
         }
     }
 
-    cout << "Distancia do vertice " << startVertex << " ao vertice " << x << ": " << distances[x] << endl;
+    // cout << "Distancia do vertice " << startVertex << " ao vertice " << i << ": " << distances[x] << endl;
 
     // Calcula a duração em milissegundos
     auto duration = duration_cast<milliseconds>(end_time - start_time);
